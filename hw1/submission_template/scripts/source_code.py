@@ -20,7 +20,7 @@ if __name__ == '__main__':
     frac_trump_mentions =  len(comments.loc[comments["trump_mention"] == True]) / len(comments)
     print("total number of rows:", len(comments))
     print("fraction of trump mentioned:", frac_trump_mentions)
-    result.loc[0] = ["frac_trump_mentions", round(frac_trump_mentions, 4)]
+    result.loc[0] = ["frac_trump_mentions", round(frac_trump_mentions, 3)]
     result.to_csv("results.tsv", sep='\t', index=False)
 
     # Eliminate the repeating ones
@@ -29,7 +29,7 @@ if __name__ == '__main__':
     frac_trump_mentions =  len(comments.loc[comments["trump_mention"] == True]) / len(comments)
     print("total number of rows after eliminating duplicates:", len(comments))
     print("fraction of trump mentioned:", frac_trump_mentions)
-    result.loc[0] = ["frac_trump_mentions", round(frac_trump_mentions, 4)]
+    #result.loc[0] = ["frac_trump_mentions", round(frac_trump_mentions, 4)]
     result.to_csv("results.tsv", sep='\t', index=False)
 
     # Checking if lower-case trumps are eliminated
