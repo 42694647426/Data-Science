@@ -1,2 +1,2 @@
-# COMP598-FALL2021
-Assignments Solutions
+# COMP598-FALL2021-Data Science
+Assignments and Projects
