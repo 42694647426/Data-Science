@@ -1,0 +1,9 @@
+my ip_address:
+18.219.125.183
+
+A1:
+http://18.219.125.183:8008/comp598_hw2.txt
+
+A2:
+mariadb -u comp598_grader -p -h 18.219.125.183 --port 6002
+password: $ungl@ss3s
