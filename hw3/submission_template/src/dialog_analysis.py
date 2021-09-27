@@ -4,13 +4,13 @@ import json
 def generate_json(dialog: pd.DataFrame, output_path: str):
     pony = ["twilight sparkle", "applejack", "rarity", "pinkie pie", "rainbow dash", "fluttershy"]
     output = {"count":dict.fromkeys(pony, 0),"verbosity":dict.fromkeys(pony, 0)}
-    total = 0
     for index, row in dialog.iterrows():
-        if row["pony"].lower() in pony:
-            output["count"][row["pony"].lower()] +=1
-            total += 1
+        ponies = [p for p in pony if p in row["pony"].lower()]
+        if ponies:
+            for p in ponies: 
+                output["count"][p] +=1
     for i in pony:
-        output["verbosity"][i] = output["count"][i] / total
+        output["verbosity"][i] = output["count"][i] / dialog.shape[0]
     with open(output_path, 'w') as f:
         json.dump(output, f)
     return
