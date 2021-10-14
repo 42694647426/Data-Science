@@ -58,9 +58,9 @@ print(all_graph.head())
 source = ColumnDataSource(all_graph)
 
 
-p = figure(title="Average response hour", x_axis_label='month', y_axis_label='time(h)', x_axis_type='datetime')
-p.line(x ="closed_date", y="diff_h", legend_label='all', line_width=2, source=source)
-p.line(x ="closed_date", y="diff_h", legend_label="zipcode1", color = "orange", line_width=2, source=source1)
+p = figure(title="311 Service Average Response Time in Hours", x_axis_label='Months', y_axis_label='Response Time (hours)', x_axis_type='datetime')
+p.line(x ="closed_date", y="diff_h", legend_label='all', color = "red", line_width=2, source=source)
+p.line(x ="closed_date", y="diff_h", legend_label="zipcode1", color = "blue", line_width=2, source=source1)
 p.line(x ="closed_date", y="diff_h",legend_label="zipcode2", color = "green", line_width=2, source=source2)
 
 # put the button and plot in a layout and add to the document

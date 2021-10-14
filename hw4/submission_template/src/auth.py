@@ -30,7 +30,7 @@ class LoginHandler(RequestHandler):
         auth = self.check_permission(username, password)
         if auth:
             self.set_current_user(username)
-            self.redirect("/secret_page")
+            self.redirect("/nyc_dash")
         else:
             error_msg = "?error=" + tornado.escape.url_escape("Login incorrect! Please Try Again !")
             self.redirect(login_url + error_msg)
