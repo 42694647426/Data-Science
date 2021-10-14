@@ -26,8 +26,8 @@ def get_average(data: pd.DataFrame, zipcode = None):
     else:
         zip_data = data
     month = zip_data.closed_date.dt.to_period("M")
-    group_by_month =  zip_data.assign(diff_h=(zip_data.closed_date - zip_data.created_date).dt.total_seconds()/3600)
-    group_by_month = group_by_month.groupby(month)['closed_date', 'diff_h'].mean()
+    #group_by_month =  zip_data.assign(diff_h=(zip_data.closed_date - zip_data.created_date).dt.total_seconds()/3600)
+    group_by_month = zip_data.groupby(month)['closed_date', 'diff_h'].mean()
     return group_by_month
 
 dropdown1 = Select(title="Zipcode 1", options=zipcodes, value="")

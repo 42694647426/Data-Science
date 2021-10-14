@@ -1,5 +1,42 @@
+[W 2021-10-14 15:57:43.343 LabApp] 'ip' has moved from NotebookApp to ServerApp. This config will be passed to ServerApp. Be sure to update your config before our next release.
+[W 2021-10-14 15:57:43.344 LabApp] 'password' has moved from NotebookApp to ServerApp. This config will be passed to ServerApp. Be sure to update your config before our next release.
+[W 2021-10-14 15:57:43.344 LabApp] 'port' has moved from NotebookApp to ServerApp. This config will be passed to ServerApp. Be sure to update your config before our next release.
+[W 2021-10-14 15:57:43.344 LabApp] 'port' has moved from NotebookApp to ServerApp. This config will be passed to ServerApp. Be sure to update your config before our next release.
+[I 2021-10-14 15:57:43.352 LabApp] JupyterLab extension loaded from /home/annas/anaconda3/lib/python3.8/site-packages/jupyterlab
+[I 2021-10-14 15:57:43.352 LabApp] JupyterLab application directory is /home/annas/anaconda3/share/jupyter/lab
+[I 15:57:43.356 NotebookApp] Serving notebooks from local directory: /home/annas/comp598-2021/hw4/submission_template
+[I 15:57:43.356 NotebookApp] Jupyter Notebook 6.3.0 is running at:
+[I 15:57:43.356 NotebookApp] http://ip-172-31-35-87:8888/
+[I 15:57:43.357 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[W 15:57:43.361 NotebookApp] No web browser found: could not locate runnable browser.
+[I 15:58:13.268 NotebookApp] 302 GET / (166.48.219.185) 0.580000ms
+[I 15:58:13.403 NotebookApp] 302 GET /tree? (166.48.219.185) 0.800000ms
+[I 15:58:20.364 NotebookApp] 302 POST /login?next=%2Ftree%3F (166.48.219.185) 1.290000ms
+[I 15:58:30.302 NotebookApp] Kernel started: fd0fb71b-62bc-4410-8d60-377f3a8c2513, name: python3
+[I 15:59:19.775 NotebookApp] Saving file at /notebooks/A4.ipynb
+[I 16:00:30.293 NotebookApp] Saving file at /notebooks/A4.ipynb
+[I 16:02:30.492 NotebookApp] Saving file at /notebooks/A4.ipynb
+[I 16:02:37.295 NotebookApp] interrupted
 Serving notebooks from local directory: /home/annas/comp598-2021/hw4/submission_template
 1 active kernel
 Jupyter Notebook 6.3.0 is running at:
 http://ip-172-31-35-87:8888/
-Shutdown this notebook server (y/[n])? 
+Shutdown this notebook server (y/[n])? [C 16:02:39.115 NotebookApp] received signal 2, stopping
+[I 16:02:39.115 NotebookApp] Shutting down 1 kernel
+[I 16:02:39.417 NotebookApp] Kernel shutdown: fd0fb71b-62bc-4410-8d60-377f3a8c2513
+[I 16:02:39.417 NotebookApp] Shutting down 0 terminals
+[I 16:02:39.419 NotebookApp] KernelRestarter: restarting kernel (1/5), keep random ports
+kernel fd0fb71b-62bc-4410-8d60-377f3a8c2513 restarted
+[E 16:02:39.420 NotebookApp] Exception in callback <bound method KernelRestarter.poll of <jupyter_client.ioloop.restarter.IOLoopKernelRestarter object at 0x7fe59271a3d0>>
+    Traceback (most recent call last):
+      File "/home/annas/anaconda3/lib/python3.8/site-packages/tornado/ioloop.py", line 905, in _run
+        return self.callback()
+      File "/home/annas/anaconda3/lib/python3.8/site-packages/jupyter_client/restarter.py", line 116, in poll
+        self.kernel_manager.restart_kernel(now=True, newports=newports)
+      File "/home/annas/anaconda3/lib/python3.8/site-packages/jupyter_client/manager.py", line 503, in restart_kernel
+        self.shutdown_kernel(now=now, restart=True)
+      File "/home/annas/anaconda3/lib/python3.8/site-packages/jupyter_client/manager.py", line 441, in shutdown_kernel
+        self.interrupt_kernel()
+      File "/home/annas/anaconda3/lib/python3.8/site-packages/jupyter_client/manager.py", line 597, in interrupt_kernel
+        raise RuntimeError("Cannot interrupt kernel. No kernel is running!")
+    RuntimeError: Cannot interrupt kernel. No kernel is running!
