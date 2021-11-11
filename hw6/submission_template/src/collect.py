@@ -30,9 +30,9 @@ def authenticate():
     headers = {**headers, **{'Authorization': f"bearer {TOKEN}"}}
     return headers
 
-def create_samples(file_name, subreddit_list, headers, num_post):
+def create_samples(file_name, sub_lst, headers, num_post):
     with open(file_name, 'w') as f:
-        for subr in subreddit_list:
+        for subr in sub_lst:
             response = requests.get(
                 f'https://oauth.reddit.com/r/{subr}/new', headers=headers, params={'limit':num_post})
             for post in response.json()['data']['children']:
