@@ -1,8 +1,8 @@
 {
     "twilight sparkle": [
         "weather",
-        "care",
-        "ll"
+        "food",
+        "care"
     ],
     "rarity": [
         
@@ -10,7 +10,6 @@
     "rainbow dash": [
         "yeah",
         "ll",
-        "care",
-        "weather"
+        "food"
     ]
 }

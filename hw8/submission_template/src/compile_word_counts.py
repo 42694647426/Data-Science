@@ -16,8 +16,8 @@ def main(args=sys.argv[1:]):
                 stop_words.append(line.strip('\n'))
 
     parser = argparse.ArgumentParser()
-    parser.add_argument('-o', '--output', required= True)
-    parser.add_argument('-d', '--dialog', required=True)
+    parser.add_argument('-o', '--output')
+    parser.add_argument('-d', '--dialog')
     args = parser.parse_args()
 
     df = pd.read_csv(args.dialog, usecols=['pony','dialog'])

@@ -4,10 +4,10 @@ import json
 import math
 
 
-def main(args = sys.argv[1:]):
+def main(args=sys.argv[1:]):
     parser = argparse.ArgumentParser()
-    parser.add_argument('-c', '--counts', required= True)
-    parser.add_argument('-n', '--num', type=int, required=True)
+    parser.add_argument('-c', '--counts')
+    parser.add_argument('-n', '--num', type=int)
     args = parser.parse_args()
 
     with open(args.counts) as f:
